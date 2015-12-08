@@ -13,24 +13,22 @@
 #include <string.h>
 
 Ttime read_time(Ttime mytime,const char *prompt){
-    int hours,minutes;
+    int hours, minutes;
     char str[10];
-   
     char *token2;
     char token[6];
     char *strOcuur;
-   
     int size_token;
     enum boo {y, n};
-    enum boo allowlooping= y;
+    enum boo allowlooping = y;
     hours = minutes = 0;
     
   
     while (allowlooping == y) {
         
-        printf("%s",prompt);
+        printf("%s", prompt);
         fgets(str, 10, stdin);
-        int str_size = sizeof(str)/sizeof(char);
+        int str_size = sizeof(str) / sizeof(char);
         
         
         for (int i = 0; i< str_size; i++) {
@@ -40,7 +38,7 @@ Ttime read_time(Ttime mytime,const char *prompt){
                 allowlooping = y;
                 break;
             }
-            if(str[2] != ':'){
+            if(str[2] !=  ':'){
                 printf("Incorrect Format\n");
                 token[0] = '\0';
                 allowlooping = y;
@@ -48,7 +46,7 @@ Ttime read_time(Ttime mytime,const char *prompt){
             }
             if (i<5) {
                 token[i] = str[i];
-                if ( i != 2 &&( (int)str[i]< 48|| (int)str[i] > 57)) {
+                if ( i != 2 &&( (int)str[i] < 48 || (int)str[i] > 57)) {
                     printf("Incorrect input type \n");
                     token[0] = '\0';
                     allowlooping = y;
@@ -58,19 +56,20 @@ Ttime read_time(Ttime mytime,const char *prompt){
             else
                 allowlooping = n;
         }
+        
         token[5] = '\0';
-        size_token = sizeof(token)/sizeof(char);
+        size_token = sizeof(token) / sizeof(char);
         strOcuur = strchr(token, ':');
         
         
         if( strOcuur != NULL ){
             
-            token2 = strtok(token,":");
+            token2 = strtok(token, ":");
             hours = atoi(token2);
             token2 = strtok(NULL, " ");
             minutes = atoi(token2);
         }
-        if ((hours > 23 || minutes >59) && allowlooping == n) {
+        if ((hours > 23 || minutes > 59) && allowlooping == n) {
             printf("Invalid time\n");
             allowlooping = y;
         }
@@ -99,6 +98,7 @@ Ttime compare_time_to_winner(Ttime myTime, Ttime winner){
     return time_diff;
 }
 void print_time_list(Ttime *time_list, int time_list_size){
+    
     Ttime winner = find_winner_time(time_list, time_list_size);
     
     for (int i = 0; i < time_list_size; i++) {
