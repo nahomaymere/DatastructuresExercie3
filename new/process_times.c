@@ -11,36 +11,18 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-int main(int argc, const char * argv[]) {
-    // insert code here...
-   
+int main() {
+    
     Ttime theTime;
-   
-    int num_times = 0;
-    
-    char input[2];
-    while (1) {
-        printf("How many times you have? ");
-        input[0]= getchar();
-        num_times = atoi(input);
-        getchar();
-        if (num_times > 0 && num_times < 11) {
-            break;
-        }
-        
-      }
-    
+    int num_times = get_numberof_runners("How many runners do you have?");
     Ttime runnersTime[num_times];
+    
     for (int i = 0 ; i< num_times; i ++) {
             printf("Give the time %d (hh:mm) ",i+1);
-            runnersTime[i] =  read_time(&theTime, "");
-            
+            runnersTime[i] =  read_time(theTime, "");
         }
-        
-    
+    printf("\n");
+    print_time_list(runnersTime, num_times);
 
-
-
- 
     return 0;
 }
