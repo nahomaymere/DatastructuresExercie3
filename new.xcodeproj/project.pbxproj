@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1124ABDA1C172543009ADB18 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1124ABD91C172543009ADB18 /* main.c */; };
+		1124ABE31C172564009ADB18 /* Time.c in Sources */ = {isa = PBXBuildFile; fileRef = 1124ABE01C172564009ADB18 /* Time.c */; };
+		1124ABE41C172564009ADB18 /* process_times.c in Sources */ = {isa = PBXBuildFile; fileRef = 1124ABE21C172564009ADB18 /* process_times.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		1124ABD61C172543009ADB18 /* new */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = new; sourceTree = BUILT_PRODUCTS_DIR; };
-		1124ABD91C172543009ADB18 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1124ABE01C172564009ADB18 /* Time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Time.c; sourceTree = "<group>"; };
+		1124ABE11C172564009ADB18 /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		1124ABE21C172564009ADB18 /* process_times.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = process_times.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		1124ABD81C172543009ADB18 /* new */ = {
 			isa = PBXGroup;
 			children = (
-				1124ABD91C172543009ADB18 /* main.c */,
+				1124ABE01C172564009ADB18 /* Time.c */,
+				1124ABE11C172564009ADB18 /* Time.h */,
+				1124ABE21C172564009ADB18 /* process_times.c */,
 			);
 			path = new;
 			sourceTree = "<group>";
@@ -118,7 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1124ABDA1C172543009ADB18 /* main.c in Sources */,
+				1124ABE31C172564009ADB18 /* Time.c in Sources */,
+				1124ABE41C172564009ADB18 /* process_times.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
