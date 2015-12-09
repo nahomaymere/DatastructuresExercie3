@@ -29,7 +29,6 @@ Ttime read_time(Ttime mytime,const char *prompt){
         fgets(str, 10, stdin);
         int str_size = sizeof(str) / sizeof(char);
         
-        
         for (int i = 0; i< str_size; i++) {
             if (i > 4 && (int)str[i] > 31 && (int)str[i] < 127) {
                 printf("Incorrect Format\n");
