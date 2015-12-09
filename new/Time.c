@@ -23,7 +23,6 @@ Ttime read_time(Ttime mytime,const char *prompt){
     enum boo allowlooping = y;
     hours = minutes = 0;
     
-  
     while (allowlooping == y) {
         
         printf("%s", prompt);
@@ -56,11 +55,10 @@ Ttime read_time(Ttime mytime,const char *prompt){
             else
                 allowlooping = n;
         }
-        
+        // spliting string into two strings
         token[5] = '\0';
         size_token = sizeof(token) / sizeof(char);
         strOcuur = strchr(token, ':');
-        
         
         if( strOcuur != NULL ){
             
@@ -79,8 +77,6 @@ Ttime read_time(Ttime mytime,const char *prompt){
 
     return mytime;
 }
-// string can be parsed using strtol and atoi function
-
 Ttime find_winner_time(Ttime *timeList, int timeList_size){
     
     Ttime winner_time = timeList[0];
@@ -109,6 +105,7 @@ void print_time_list(Ttime *time_list, int time_list_size){
     }
 }
 int get_numberof_runners(const char *prompt){
+    
     int num_of_runners = 0;
     char input[3];
     char inp;
@@ -124,8 +121,8 @@ int get_numberof_runners(const char *prompt){
     }
     return num_of_runners;
 }
-
 void print_time(Ttime myTime){
+    
     int hours, minutes;
     hours = myTime / 60;
     minutes = myTime % 60;

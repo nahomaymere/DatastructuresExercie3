@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include "Time.h"
-#include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 int main() {
